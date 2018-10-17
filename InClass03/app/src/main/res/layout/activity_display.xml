@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayActivity">
+
+    <TextView
+        android:id="@+id/promptForName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/displayName"
+        app:layout_constraintEnd_toStartOf="@+id/nameText"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/prmoptForEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/displayEmail"
+        app:layout_constraintBottom_toTopOf="@+id/addressText"
+        app:layout_constraintEnd_toStartOf="@+id/textEmail"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+    <TextView
+        android:id="@+id/promptForAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/displayAddress"
+        app:layout_constraintBottom_toTopOf="@+id/phoneText"
+        app:layout_constraintEnd_toStartOf="@+id/addressText"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/promptForPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/displayPhone"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneText"
+        app:layout_constraintEnd_toStartOf="@+id/phoneText"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/phoneText" />
+
+    <TextView
+        android:id="@+id/moodText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/displayMood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textMood"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneText" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="@string/showName"
+        app:layout_constraintEnd_toStartOf="@+id/buttonName"
+        app:layout_constraintStart_toEndOf="@+id/promptForName"
+        app:layout_constraintTop_toBottomOf="@+id/InfoText" />
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showEmail"
+        app:layout_constraintBaseline_toBaselineOf="@+id/prmoptForEmail"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEmail"
+        app:layout_constraintStart_toEndOf="@+id/prmoptForEmail" />
+
+    <TextView
+        android:id="@+id/addressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/promptForAddress"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAddress"
+        app:layout_constraintStart_toEndOf="@+id/promptForAddress"
+        app:layout_constraintTop_toTopOf="@+id/promptForAddress" />
+
+    <TextView
+        android:id="@+id/phoneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showPhone"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonPhone"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPhone"
+        app:layout_constraintStart_toEndOf="@+id/promptForPhone"
+        app:layout_constraintTop_toTopOf="@+id/buttonPhone" />
+
+    <TextView
+        android:id="@+id/textMood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/showMood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMood"
+        app:layout_constraintStart_toEndOf="@+id/moodText"
+        app:layout_constraintTop_toBottomOf="@+id/phoneText" />
+
+    <ImageButton
+        android:id="@+id/buttonEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textEmail"
+        app:layout_constraintTop_toBottomOf="@+id/buttonName"
+        app:srcCompat="@drawable/ic_action_edit" />
+
+    <ImageButton
+        android:id="@+id/buttonAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addressText"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEmail"
+        app:srcCompat="@drawable/ic_action_edit" />
+
+    <ImageButton
+        android:id="@+id/buttonPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phoneText"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddress"
+        app:srcCompat="@drawable/ic_action_edit" />
+
+    <ImageButton
+        android:id="@+id/buttonMood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textMood"
+        app:srcCompat="@drawable/ic_action_edit" />
+
+    <ImageButton
+        android:id="@+id/buttonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_action_edit" />
+
+    <TextView
+        android:id="@+id/InfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/textInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
